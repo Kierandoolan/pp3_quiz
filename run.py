@@ -20,7 +20,7 @@ quiz_info = [
      "answers": {"A": "Germany",
                  "B": "China",
                  "C": "USA",
-		         "D": "Microsoft"},
+		         "D": "London"},
      "correct": "A"},
 
     {"question": "Q4. Which of these is a Song from Red Hot Chilli Peppers:",
@@ -82,18 +82,40 @@ def introduction():
     print ("Please Pick A, B, C or D when answering \n")
 
     start= True
-
     while start:
-
         answer = input(f"Are you ready to begin the quiz {name} Y/N :")
 
-    
-
         if answer.upper() == "Y":
-            print('ready')
+            
+            print('Lets Play the Quiz!')
             break
         elif answer.upper() == "N":
             print('not ready')
         else :
             print('invalid')
+
+def start_quiz(quiz_info):
+    cash = 0
+    for info in quiz_info:
+        answer = ''
+        while answer not in ['A', 'B', 'C', 'D']:
+            print(f"{info['question']}")
+
+            for key, value in info['answers'].items():
+                print(f"{key}: {value}")
+
+            answer = input("What is your answer?\n")
+            answer = answer.upper()
+
+            if answer not in info['answers']:
+                print("Invalid Choice. Please try again with the correct letters\n")
+        if answer == info['correct']:
+            cash += 100
+            print(f"Well done thats the correct answer ! You gain {cash} euro \n")
+        else:
+            print("Wrong answer.")
+
+
+
 introduction()
+start_quiz(quiz_info)
