@@ -2,6 +2,7 @@
 import section (get color)
 """
 
+
 quiz_info = [
     {"question": "Q1. What is the Capital of Ireland:",
      "answers": {"A": "Galway",
@@ -66,4 +67,33 @@ quiz_info = [
      "correct": "B"},
 ]
 
-print(quiz_info)
+
+def introduction():
+
+    """
+    Function to ask the user for name, explain what the game
+    and to ask are they ready to begin the quiz
+    """
+    name = input("Please enter your name: \n")
+
+    print (f"Welcome to the Trivia Quiz {name} where we test your knowledge, \n")
+    print ("There are 10 questions that gets harder with each question answered, \n")
+    print ("There are four choices for each question \n")
+    print ("Please Pick A, B, C or D when answering \n")
+
+    start= True
+
+    while start:
+
+        answer = input(f"Are you ready to begin the quiz {name} Y/N :")
+
+    
+
+        if answer.upper() == "Y":
+            print('ready')
+            break
+        elif answer.upper() == "N":
+            print('not ready')
+        else :
+            print('invalid')
+introduction()
