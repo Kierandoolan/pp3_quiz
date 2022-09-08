@@ -95,6 +95,11 @@ def introduction():
             print('invalid')
 
 def start_quiz(quiz_info):
+
+    """
+    Function to loop through all questions and possible answers
+    when the user gets the answer correct 100euro is added to their score.
+    """
     cash = 0
     for info in quiz_info:
         answer = ''
@@ -115,7 +120,31 @@ def start_quiz(quiz_info):
         else:
             print("Wrong answer.")
 
+    end_of_quiz(cash)
 
+def end_of_quiz(cash):
+    """
+    Function to tell the user of its overall score
+    """
+    print(f"Well done overall you have made {cash}. Congraulations!")
+    restart_game()
+
+
+def restart_game():
+    """
+    Function to ask the user if they would like to restart the game 
+    or to finish the game
+    """
+    answer = input("Would you like to try and beat your score? Y/N: ")
+    if answer.upper() == "Y":
+        start_quiz(quiz_info)
+    elif answer.upper() == "N":
+        print("Thanks for Playing!")
+    else:
+        print("invalid Choice")
+        restart_game()
+        
 
 introduction()
 start_quiz(quiz_info)
+
