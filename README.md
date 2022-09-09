@@ -1,31 +1,51 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# About
 
-Welcome Kierandoolan,
+## Cash Quiz
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Write about the quiz 
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Find the live game here
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Here's how the game is displayed:  
+
+
+
+### You can either press yes or no to either restart the game or end the loop.  
+
+# Testing and deploying project
+
+### Testing thru the Pep8 website 
+
+
+## Created the Heroku app
+
+* I started with creating a _Config Var_ called `PORT`, and set this to `8000` in my Heroku page.  
+
+* I created the app using following steps:  
+* I added two buildpacks from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* The importance here is to first have the Python, and after it the nodejs for it to work properly.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+# Technologies used
 
-Connect your GitHub repository and deploy as normal.
+* This project was made using only Python.  
+* Code is written in gitpod.  
+* This project has been deployed to Heroku.  
 
-## Constraints
+# Future additions.   
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
+# Errors and issues. 
+
+
+
+# Credits and content
+ 
+
+# Acknowledgements
+ 
