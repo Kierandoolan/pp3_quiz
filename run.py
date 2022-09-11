@@ -28,13 +28,15 @@ quiz_info = [
                  "C": "Adore You ",
                  "D": "Londons Burning"},
      "correct": "B"},
-    {"question": "Q5. Which of these EU countries does not use the euro as its currency?",
+    {"question": "Q5. Which of these EU countries does not use the euro as\
+ its currency?",
      "answers": {"A": "Poland",
                  "B": "Denmark",
                  "C": "Sweeden",
                  "D": "All of the Above"},
      "correct": "D"},
-    {"question": "Q6. What color dresses do Chinese women traditionally wear on their wedding day? ",
+    {"question": "Q6. What color dresses do Chinese women traditionally wear on\
+ their wedding day? ",
      "answers": {"A": "Blue",
                  "B": "Gold",
                  "C": "White",
@@ -58,7 +60,8 @@ quiz_info = [
                  "C": "Brazil",
                  "D": "Poland"},
      "correct": "B"},
-    {"question": "Final Question.  Which of these US presidents appeared on the television series 'Laugh-In'  ",
+    {"question": "Final Question.  Which of these US presidents appeared on\
+ the television series 'Laugh-In'  ",
      "answers": {"A": "Lyndon Johnson",
                  "B": "Richard Nixon",
                  "C": "Jimmy Carter",
@@ -74,9 +77,14 @@ def introduction():
     and to ask are they ready to begin the quiz
     """
     name = input("Please enter your name: \n")
-
+    print(" _____ _             ___        _     ")
+    print("|_   _| |__   ___   / _ \ _   _(_)____")
+    print("  | | | '_ \ / _ \ | | | | | | | |_  /")
+    print("  | | | | | |  __/ | |_| | |_| | |/ / ")
+    print("  |_| |_| |_|\___|  \__\_\\__,_|_/___|")                         
     print (f"Welcome to the Trivia Quiz {name} where we test your knowledge ")
-    print ("There are 10 questions that gets harder with each question answered,")
+    print ("There are 10 questions that gets harder with each\
+ question answered,")
     print ("There are four choices for each question ")
     print ("Please Pick A, B, C or D when answering \n")
 
@@ -110,10 +118,12 @@ def start_quiz(quiz_info):
             answer = answer.upper()
 
             if answer not in info['answers']:
-                print("Invalid Choice. Please try again with the correct letters\n")
+                print("Invalid Choice. Please try again with the\
+ correct letters\n")
         if answer == info['correct']:
             cash += 100
-            print(Fore.GREEN + f"Well done thats the correct answer! You gain {cash} euro \n")
+            print(Fore.GREEN + f"Well done thats the correct answer!\
+ You gain {cash} euro \n")
         else:
             print(Fore.RED + " Oh No! Wrong answer.")
 
@@ -125,11 +135,14 @@ def end_of_quiz(cash):
     Function to tell the user of its overall score
     """
     if cash == 1000:
-        print(Fore.YELLOW + f"Well done you got the top prize of {cash}euro.Congraulations!")
+        print(Fore.YELLOW + f"Well done you got the top prize of {cash}euro.\
+ Congraulations!")
     elif cash == 0:
-        print(Fore.RED + f"Oh no you didn't get any questions right.You have zero euro!")
+        print(Fore.RED + f"Oh no you didn't get any questions right.\
+ You have zero euro!")
     else:
-        print(Fore.GREEN + f"Well done overall you have made {cash} euro.Congraulations!")
+        print(Fore.GREEN + f"Well done overall you have made {cash} euro.\
+ Congraulations!")
     restart_game()
 
 
