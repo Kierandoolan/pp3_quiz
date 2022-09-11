@@ -110,12 +110,10 @@ def start_quiz(quiz_info):
             answer = answer.upper()
 
             if answer not in info['answers']:
-                print("Invalid Choice. Please try again with the\
-                correct letters\n")
+                print("Invalid Choice. Please try again with the correct letters\n")
         if answer == info['correct']:
             cash += 100
-            print(Fore.GREEN + f"Well done thats the correct answer!\
-            You gain {cash} euro \n")
+            print(Fore.GREEN + f"Well done thats the correct answer! You gain {cash} euro \n")
         else:
             print(Fore.RED + " Oh No! Wrong answer.")
 

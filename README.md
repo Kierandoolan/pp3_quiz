@@ -1,8 +1,11 @@
 # About
 
-## Cash Quiz
+## The Cash Quiz
 
-Write about the quiz 
+The project is based on a general knowledge quiz.  Each question will have multiple choice answers that the user can pick. 
+If the user picks the correct answer they will gain 100euro. If they answer wrong the cash remains the same.
+At the end of the game they can see how much they have won. They will then have a choice to play again to see if they
+can beat their last score and earn more money.
 
 
 ## Find the live game here
