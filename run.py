@@ -110,7 +110,7 @@ def start_quiz(quiz_info):
     for info in quiz_info:
         answer = ''
         while answer not in ['A', 'B', 'C', 'D']:
-            print(Fore.MAGENTA + f"{info['question']}")
+            print(Fore.LIGHTYELLOW_EX + f"{info['question']}")
 
             for key, value in info['answers'].items():
                 print(Fore.CYAN + f"{key}: {value}")
