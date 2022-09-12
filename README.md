@@ -14,9 +14,8 @@ The Project is a general knowledge quiz game.
 * After the 10th question the total the user won is shown
 * They have a choice to play again or to end the game.
 
-## Find the live game here
+## [Click here for the live game](https://pp3quiz.herokuapp.com/)
 
-https://pp3quiz.herokuapp.com/
 
 ## User Experience (UX)
 
@@ -24,7 +23,7 @@ https://pp3quiz.herokuapp.com/
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to know how to rules of the game 
+        1. As a First Time Visitor, I want to know the rules of the game 
         2. As a First Time Visitor, I want to play the game without any complications such as a typo in the answers.
          
 
@@ -68,7 +67,7 @@ https://pp3quiz.herokuapp.com/
 
 # Errors and issues. 
 
-* I had plenty if indented errors which was fixed by focusing a little more.
+* I had plenty of indented errors which was fixed by focusing a little more.
 * pep8online was kind enough to tell me plenty of lines were too long, Which i resolved but i
 think the code doesn't look as clean.
              <h2 align="center"><img src="assets/too-long.png"></h2>
