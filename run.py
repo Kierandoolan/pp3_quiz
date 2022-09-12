@@ -77,11 +77,11 @@ def introduction():
     and to ask are they ready to begin the quiz
     """
     name = input("Please enter your name: \n")
-    print(" _____ _             ___        _     ")
-    print("|_   _| |__   ___   / _ \ _   _(_)____")
-    print("  | | | '_ \ / _ \ | | | | | | | |_  /")
-    print("  | | | | | |  __/ | |_| | |_| | |/ / ")
-    print("  |_| |_| |_|\___|  \__\_\\__,_|_/___|")                         
+    print(Fore.GREEN + " _____ _             ___        _     ")
+    print(Fore.GREEN + "|_   _| |__   ___   / _ \ _   _(_)____")
+    print(Fore.GREEN + "  | | | '_ \ / _ \ | | | | | | | |_  /")
+    print(Fore.GREEN + "  | | | | | |  __/ | |_| | |_| | |/ / ")
+    print(Fore.GREEN + "  |_| |_| |_|\___|  \__\_\\__,__|_/___|")
     print (f"Welcome to the Trivia Quiz {name} where we test your knowledge ")
     print ("There are 10 questions that gets harder with each\
  question answered,")
@@ -92,40 +92,41 @@ def introduction():
     while start:
         answer = input(f"Are you ready to begin the quiz {name} Y/N :")
         if answer.upper() == "Y":
-            print('Lets Play the Quiz! \n')
+            print('Excellent! Lets Play the Quiz! \n')
             break
         elif answer.upper() == "N":
-            print('not ready')
+            print('Not ready. please press Y when ready.')
         else:
-            print('invalid')
+            print(Fore.RED + 'invalid')
 
 
 def start_quiz(quiz_info):
     """
     Function to loop through all questions and possible answers
     when the user gets the answer correct 100euro is added to their score.
+    I got aid from https://realpython.com/python-quiz-application/
     """
     cash = 0
     for info in quiz_info:
         answer = ''
         while answer not in ['A', 'B', 'C', 'D']:
-            print(f"{info['question']}")
+            print(Fore.MAGENTA + f"{info['question']}")
 
             for key, value in info['answers'].items():
-                print(f"{key}: {value}")
+                print(Fore.CYAN + f"{key}: {value}")
 
             answer = input("What is your answer?\n")
             answer = answer.upper()
 
             if answer not in info['answers']:
-                print("Invalid Choice. Please try again with the\
- correct letters\n")
+                print(Fore.RED + "Invalid Choice. Please try again with the\
+ correct letters \n")
         if answer == info['correct']:
             cash += 100
             print(Fore.GREEN + f"Well done thats the correct answer!\
  You gain {cash} euro \n")
         else:
-            print(Fore.RED + " Oh No! Wrong answer.")
+            print(Fore.RED + " Oh No! Wrong answer. \n")
 
     end_of_quiz(cash)
 
@@ -155,9 +156,9 @@ def restart_game():
     if answer.upper() == "Y":
         start_quiz(quiz_info)
     elif answer.upper() == "N":
-        print("Thanks for Playing!")
+        print("Thanks for Playing! Please come back again")
     else:
-        print("invalid Choice")
+        print(Fore.RED + "Invalid Choice")
         restart_game()
 
 introduction()
