@@ -16,6 +16,8 @@ The Project is a general knowledge quiz game.
 
 ## [Click here for the live game](https://pp3quiz.herokuapp.com/)
 
+## Chart Of How the Project Works 
+<h2 align="center"><img src="assets/chart.png"></h2>
 
 ## User Experience (UX)
 
